@@ -25,11 +25,11 @@
 
 const sections = document.getElementsByTagName("section");
 const ulList = document.getElementById("navbar__list");
+const toggle_button = document.getElementsByClassName("toggle_button")[0];
 
 for (let index = 0; index < sections.length; index++) {
   const nav_link = document.createElement("a");
   nav_link.classList.add("menu__link");
-  nav_link.href = "#" + sections[index].id;
   nav_link.id = "#" + sections[index].id;
   nav_link.textContent = sections[index].id;
   const li = document.createElement("li");
@@ -106,9 +106,6 @@ for (let index = 0; index < links.length - 1; index++) {
 // Set sections as active
 
 // Responsive navbar
-
-const toggle_button = document.getElementsByClassName("toggle_button")[0];
-
 toggle_button.addEventListener("click", function () {
   toggle_button.childNodes.forEach(function (item) {
     if (item.nodeName === "SPAN")
@@ -124,8 +121,27 @@ toggle_button.addEventListener("click", function () {
     else return "#fff";
   }
   function changeDisplay(item) {
-    if (item.style.display === "block") return "none";
-    else return "block";
+    if (item.style.display === "block") {
+      if (document.body.clientWidth > 850) {
+        return "inline-block";
+      } else {
+        return "none";
+      }
+    } else if (item.style.display === "none") {
+      if (document.body.clientWidth > 850) {
+        return "inline-block";
+      } else {
+        return "block";
+      }
+    } else if (item.style.display === "inline-block") {
+      return "none";
+    } else {
+      if (document.body.clientWidth > 850) {
+        return "inline-block";
+      } else {
+        return "block";
+      }
+    }
   }
 });
 

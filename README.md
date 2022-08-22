@@ -15,4 +15,27 @@
 * I used some built-in functions of JS like `add()` and `remove()` to making some operations of classList and also check if class exist or not by using `contains()` function.
 * In adding responsive design to navbar, i wrote some CSS code for screen with max-size equal to 850 as a max value of width, also, i added some of code in JS to change color of navbar icon and change display value of an element.
 
+## How to run the project?
+
+* ### Clone project by git command:
+
+        git clone https://github.com/Mubarakismail/landing_page.git
+* ### By downloading Zip file from pressing in code button above repo.
+### After downloading project in your device you can open `index.html` by browser not editor.
+
+## Technologies used
+
+* HTML
+* CSS
+* Javascript
+* DOM
+
+## Author's name
+*   [Me and only me](https://github.com/Mubarakismail).
+
+## Dependencies.
+
+* Browser like (Chrome)
+* IDE like Visual Studio Code 
+
 To go deep of understanding, open `js/app.js` and start reading my code with comments in each block.
